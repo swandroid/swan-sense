@@ -163,7 +163,6 @@ public class LoginActivity extends Activity {
         // Set up the login form.
         mEmail = getIntent().getStringExtra(EXTRA_EMAIL);
         mEmailView = (EditText) findViewById(R.id.email);
-        mEmailView.setText("nadina.sovaiala");
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -176,7 +175,6 @@ public class LoginActivity extends Activity {
                 return false;
             }
         });
-        mPasswordView.setText("travka10");
         mLoginFormView = findViewById(R.id.login_form);
         mLoginStatusView = findViewById(R.id.login_status);
         mLoginStatusMessageView = (TextView) findViewById(R.id.login_status_message);
