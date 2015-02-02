@@ -1,0 +1,11 @@
+com.google.android.gms
+interdroid.sense
+interdroid.swan
+interdroid.swan.crossdevice
+interdroid.swan.engine
+interdroid.swan.sensors
+interdroid.swan.sensors.impl
+interdroid.swan.swansong
+interdroid.swan.ui
+interdroid.swan.util
+nl.sense_os.service
