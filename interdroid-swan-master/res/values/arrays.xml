@@ -252,8 +252,6 @@
 
     <!-- rain sensor -->
     <string-array name="rain_valuepaths">
-        <item>start_time</item>
-        <item>stop_time</item>
         <item>expected_mm</item>
     </string-array>
 

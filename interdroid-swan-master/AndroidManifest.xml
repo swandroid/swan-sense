@@ -6,7 +6,7 @@
     android:versionName="1.0" 
     tools:ignore="ExportedService,ExportedReceiver">
 
-    <uses-sdk
+	<uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="21" />
 
@@ -608,11 +608,26 @@
         </activity>
         <activity
             android:name="interdroid.swan.sensors.impl.RainSensor$ConfigurationActivity"
-            android:exported="true" >
+            android:exported="true" 
+            android:icon="@drawable/rain_icon">
             <intent-filter>
-
-                <!-- <action android:name="interdroid.swan.sensor.DISCOVER" /> -->
+				<action android:name="interdroid.swan.sensor.DISCOVER" /> 
             </intent-filter>
+                <meta-data
+                android:name="entityId"
+                android:value="rain" />                  
+                <meta-data
+                android:name="valuePaths"
+                android:value="expected_mm" />
+                <meta-data
+                android:name="latitude"
+                android:value="0L" />
+            	<meta-data
+                android:name="longitude"
+                android:value="0L" />
+               	<meta-data
+                android:name="units"
+                android:value="mm/Hr" />               
         </activity>
         <activity
             android:name="interdroid.swan.sensors.impl.ScreenSensor$ConfigurationActivity"
@@ -943,7 +958,12 @@
             android:exported="true"
             android:process=":wifisensor" >
         </service>
-
+		<service
+            android:name="interdroid.swan.sensors.impl.RainSensor"
+            android:exported="true"
+            android:process=":rainsensor" >
+        </service>
+        
       <!--   <provider
             android:name="interdroid.swan.sensors.impl.WifiSensor$Provider"
             android:authorities="interdroid.context.sensor.wifi" /> -->
@@ -963,6 +983,7 @@
             android:exported="true"
             android:process=":intentsensor" >
         </service>
+        
         
         <!-- Sense -->
         <!-- MAIN SERVICE THAT MANAGES SENSING -->
